@@ -1,0 +1,18 @@
+<launch>
+
+    <!-- <arg name="r" default="128" />
+    <arg name="g" default="255" />
+    <arg name="b" default="100" /> -->
+
+    <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop_twist_keyboard">
+        <remap from="/cmd_vel" to="/turtle1/cmd_vel"/>
+    </node>
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlesim" />
+    <!-- <node pkg="sibalturtle" type="yh_turtle_keyb.py" name="yh_turtle_keyb"/>
+
+    <param name="turtlesim/background_r" value="$(arg r)" />
+    <param name="turtlesim/background_g" value="$(arg g)" />
+    <param name="turtlesim/background_b" value="$(arg b)" /> -->
+
+    
+</launch>
